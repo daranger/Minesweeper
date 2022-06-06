@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+
+body {
+    background-color: #282c34;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 800px;
+}
+
+.minesweeper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 290px;
+    height: 450px;
+    border-radius: 5px;
+    background-color: #61dafb;
+}
+
+.control-panel {
+    background-color: #282c34;
+    width: 250px;
+    height: 120px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.description {
+    color: #fff;
+    font-size: 24px;
+}
+
+.controls {
+    color: #fff;
+    display: flex;
+    justify-content: stretch;
+    margin-top: 20px;
+}
+
+.controls > span {
+    width: 70px;
+}
+
+.counter {
+    display: flex;
+    justify-content: start;
+}
+
+.controls > span:nth-child(2) {
+    display: flex;
+    justify-content: center;
+}
+
+.reset {
+    padding: 0 5px;
+    background-color: #282c34;
+    border: none;
+    cursor: pointer;
+}
+
+.reset:hover {
+    cursor: pointer;
+}
+
+.timer {
+    display: flex;
+    justify-content: end;
+}
+
+.bomb {
+    vertical-align: bottom;
+    margin-left: 20px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .bomb {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.field {
+    margin-top: 30px;
+    background-color: #282c34;
+    width: 250px;
+    height: 270px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell, .checked, .fired, .target {
+    background-color: #000;
+    width: 23px;
+    height: 23px;
+    margin: 1px 3px;
+    color: #fff;
+    border: none;
+}
+
+.checked {
+    background-color: #282c34;
+    border: 2px #fff inset;
+    vertical-align: bottom;
+}
+
+.fired {
+    background-color: #7a0707;
+    background-image: url("./../public/fired.svg");
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: center;
+}
+
+.target {
+    background-color: #022c3a;
+    background-image: url("./../public/target.svg");
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: center;
+}
